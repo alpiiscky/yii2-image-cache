@@ -2,26 +2,54 @@ Image Resize
 ============
 Пропорциональный ресайз и кроп изображений
 
-Installation
+Установка
 ------------
+Выполните 
 
 ```
 composer require --prefer-dist alpiiscky/yii2-image-cache "*"
 ```
 
-or add
+или добавьте
 
 ```
 "alpiiscky/yii2-image-cache": "*"
 ```
 
-to the require section of your `composer.json` file.
+в раздел require вашего файла `composer.json`.
 
 
-Usage
+Настройка
 -----
 
-Once the extension is installed, simply use it in your code by  :
+Добавьте в раздел components следующие строки:
+
+```php
+'components' => [
+    'thumb' => [
+        'class' => 'alpiiscky\simplehelpers\Thumb' ,
+        'cachePath' => '@webroot/cache',
+        'options' => [
+            'placeholder' => [
+                'type' => \alpiiscky\imagecache\Thumb::THUMBNAIL_INSET,
+                'backgroundColor' => '#f5f5f5',
+                'textColor' => '#cdcdcd',
+                'textSize' => 30,
+                'text' => 'No image'
+            ],
+            'quality' => 92,
+            'tinyPng' => [
+                'apiKey' => null
+            ]
+        ]
+    ]
+]
+```
+
+Использование
+-----
+
+Для использования кропа и ресайза можно использовать виджет  :
 
 ```php
 <?= \alpiiscky\imagecache\ThumbWidget::widget([
@@ -33,6 +61,12 @@ Once the extension is installed, simply use it in your code by  :
 ]) ?>
 ```
 
-'mode' => \alpiiscky\imagecache\Thumb::CROP_CENTER
+Доступны следующие режимы 
+
+'mode' => \alpiiscky\imagecache\Thumb::CROP_CENTER - 
+
 'mode' => \alpiiscky\imagecache\Thumb::CROP_LEFT
+
 'mode' => \alpiiscky\imagecache\Thumb::CROP_RIGHT
+
+
