@@ -27,7 +27,7 @@ composer require --prefer-dist alpiiscky/yii2-image-cache "*"
 ```php
 'components' => [
     'thumb' => [
-        'class' => 'alpiiscky\simplehelpers\Thumb' ,
+        'class' => 'alpiiscky\imagecache\Thumb' ,
         'cachePath' => '@webroot/cache',
         'options' => [
             'placeholder' => [
