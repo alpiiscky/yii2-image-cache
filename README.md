@@ -19,6 +19,7 @@ composer require --prefer-dist alpiiscky/yii2-image-cache "*"
 в раздел require вашего файла `composer.json`.
 
 
+
 Основа
 -----
 
