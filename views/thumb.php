@@ -12,6 +12,10 @@
             'height' => $height,
             'width' => $width,
             'mode' => $mode
+        ],
+        'placeholder' => [
+            'width' => $width,
+            'height' => $height
         ]
     ],
     [
