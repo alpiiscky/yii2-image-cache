@@ -19,6 +19,11 @@ composer require --prefer-dist alpiiscky/yii2-image-cache "*"
 в раздел require вашего файла `composer.json`.
 
 
+Основа
+-----
+
+Создано на основе компонента ```sadovojav/yii2-image-thumbnail```, расширяя компнент до нужного функционала
+
 Настройка
 -----
 
