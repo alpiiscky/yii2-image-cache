@@ -43,6 +43,11 @@ class ThumbWidget extends Widget
     public $class = '';
 
     /**
+     * Альт
+     */
+    public $alt = '';
+
+    /**
      * файл view - можно указать свой
      */
     public $view = 'thumb';
@@ -54,7 +59,8 @@ class ThumbWidget extends Widget
             'height' => $this->height,
             'width' => $this->width,
             'mode' => $this->mode,
-            'class' => $this->class
+            'class' => $this->class,
+            'alt' => $this->alt
         ]);
     }
 }
