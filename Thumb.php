@@ -270,27 +270,13 @@ class Thumb extends Component
         $originalHeight = $originalSize->getHeight();
 
 
+        $widthRatio = $width / $originalWidth;
+        $heightRatio = $height / $originalHeight;
 
-        if ($originalWidth > $width && $originalHeight > $height) {
+        $ratio = $widthRatio > $heightRatio ? $widthRatio : $heightRatio;
 
-            $widthRatio = $width / $originalWidth;
-            $heightRatio = $height / $originalHeight;
-
-            $ratio = $widthRatio > $heightRatio ? $widthRatio : $heightRatio;
-
-            $resizeWidth = $originalWidth * $ratio;
-            $resizeHeight = $originalHeight * $ratio;
-
-        } else {
-
-            $widthRatio = $width / $originalWidth;
-            $heightRatio = $height / $originalHeight;
-
-            $ratio = $widthRatio < $heightRatio ? $widthRatio : $heightRatio;
-
-            $resizeWidth = $originalWidth / $ratio;
-            $resizeHeight = $originalHeight / $ratio;
-        }
+        $resizeWidth = $originalWidth * $ratio;
+        $resizeHeight = $originalHeight * $ratio;
 
         $this->image->resize(new Box($resizeWidth, $resizeHeight));
 
