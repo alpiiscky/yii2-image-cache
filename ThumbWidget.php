@@ -40,7 +40,7 @@ class ThumbWidget extends Widget
     /**
      * дополнительные классы для изображения
      */
-    public $class = '';
+    public $img_class = '';
 
     /**
      * Альт
@@ -59,7 +59,7 @@ class ThumbWidget extends Widget
             'height' => $this->height,
             'width' => $this->width,
             'mode' => $this->mode,
-            'class' => $this->class,
+            'class' => $this->img_class,
             'alt' => $this->alt
         ]);
     }

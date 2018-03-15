@@ -60,6 +60,7 @@ composer require --prefer-dist alpiiscky/yii2-image-cache "*"
 ```php
 <?= \alpiiscky\imagecache\ThumbWidget::widget([
       'image' => 'image.jpg',
+      'img_class' => 'classes кроме img-responsive',
       'path' => 'images/',
       'width' => 120,
       'height' => 120,
